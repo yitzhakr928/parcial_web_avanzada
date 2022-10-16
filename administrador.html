@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximun-scale=3.0, minimum-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/stiloscss.css">
+    <link rel="stylesheet" href="css/galeria.css.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/registro.css">
+    <link rel="stylesheet" href="css/administrados.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container container--flex">
+            <div class="logo-container column column--50">
+                <h1 id="titulo" class="logo" >Sintentica Barranquilla</h1>
+            </div> 
+            <div class="main-header__contacInfo column column--50">
+                <p class="main-header__contacInfo__phone">
+                    <span class="icon-phone">3521990</span>
+                </p>
+                <p class="main-header__contacInfo__address"> 
+                    <span class="icon-gps">calle15#16a-96</span>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+      <nav class="navbar navbar-expand-lg  ">
+          <a class="navbar-brand" href="#" style="font-weight: bold;">Sinteticas Barranquilla</a>
+          <button class="navbar-toggler1" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                  <li class="nav-item active">
+                      <a class="nav-link--select" href="administrador.html">Reserva Cancha <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="">horario</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="login.html">salir</a>
+                  </li>
+                  
+              </ul>
+          </div>
+      </nav>
+
+
+  </nav>
+
+  <main class="main">
+    <div class="main_formulario">
+        <h1 class="titulo_Admi">Bienvenido al sistema de Reserva de Cancha</h1>
+      <form action="" method="get">
+        <div class="casillas">
+            <div class="columna1">
+                <div class="cont">
+                    <h4 class="titulo">Informacion de la persona a Reserva</h4>
+                <div class="casilla">
+                    <div>
+                        <input type="text" class="forma" name="nombre_apellido" placeholder="Nombre y apellido" >
+                    </div>    
+                </div>
+                <div class="casilla">
+                    <div>
+                        <input type="number" class="forma" name="Cedula" placeholder="Cedula">
+                    </div>
+                </div>
+                <div class="casilla">
+                    <div>
+                        <input type="text" class="forma" name="Direccion" placeholder="Direccion">
+                    </div>  
+                </div>
+                <div class="casilla">
+                    <div>
+                        <input type="number" class="forma" name="Telefono" placeholder="Telefono">
+                    </div>
+                </div> 
+                <div class="casilla">
+                    <div>
+                        <input type="email" class="forma" name="email" placeholder="Correo Electronico">
+                    </div>
+                </div>
+                </div>
+                
+            </div>
+            <div class="columna1">
+                <div class="cont">
+                    <h4 class="titulo">Seleccion de Cancha</h4>
+                <div class="casilla">
+                    <div >
+                        <select name="Cancha" class="cancha">
+                            <option  value="0">Ninguna</option>
+                            <optgroup label="cancha1">
+                               <option value="1">
+                                cancha sintetica la patiada
+                                Cra. 20 #301, Barranquilla, Atlántico 
+                               </option >
+                            </optgroup>
+                            <optgroup label="cancha2">
+                                <option value="2">
+                                    la cantera centro cormercial carnaval
+                                    Calle15#16a-96, Soledad, Atlántico 
+                                 </option value="">
+                            </optgroup>
+                            <optgroup label="cancha3">
+                                <option value="3">
+                                    Parque del Sol
+                                    Cra. 20 #301, Barranquilla, Atlántico 
+                                 </option>
+                            </optgroup>
+                            <optgroup label="cancha4">
+                                <option value="4">
+                                    Cancha la Soledeña
+                                    Cl. 18 #28-69, Soledad, Atlántico 
+                                 </option>
+                            </optgroup>
+                          </select>
+                    </div>
+                </div>
+              
+                    <div class="casilla ">
+                        <h4>horario</h4>
+                        <div>
+                            <span>Fecha</span><br>
+                          <input type="date" name="fecha" class=" fecha">
+                        </div>
+                        <div class="horas">
+                            <div>
+                                <span>hora comienza</span><br>
+                                <input type="time" class="hora" name="hora">
+                            </div>
+                            <div>
+                                <span>hora termina</span><br>
+                                <input type="time" class="hora" name="hora">
+                            </div>
+                        </div>
+                    </div>
+              
+                </div>
+                
+                
+            </div> 
+            <div class="columna1">
+                <h4>Objetos para alquilar</h4>
+                <div id="obj">
+                    <div class="agg">
+                        <select name="obejetos-aquiler" id="Objetos">
+                            <option value="0">Ninguno</option>
+                            <option value="1">petos</option>
+                            <option value="2">Conos</option>
+                            <option value="3">Balones</option>
+                            <option value="4">Tacos</option>
+                            <option value="5">Canilleras</option>
+                            <option value="6">Guantes</option>
+                        </select>
+                        <input type="number" class="cantidad" >
+                    </div>
+                    
+                </div>
+                <input type="button" value="Agregar" name="boton" id="boton_agregar">
+            </div>           
+        </div>
+      </form>
+    </div>
+  </main>
+
+    <footer class="main-footer">
+        <div class="container container--flex">
+            <div class="column column--33">
+              <h2 class="column__title">¿porque nos visitas?</h2>
+              <p class="column__txt">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                  Laudantium libero fuga pariatur illo nesciunt optio aspernatur dolorum eum ipsum molestias asperiores, eveniet deserunt sapiente. 
+                  Neque quia esse explicabo quidem odio?
+              </p>
+              
+            </div>
+            <div class="column column--33">
+              <h2 class="column__title">Contactanos</h2>
+              <p class="column__txt">Direccion calle15#16a-96</p>
+              <p class="column__txt">Telefono 3022370061</p>
+              <p class="column__txt">yitzhakruiz@hotmail.com</p>
+            </div>
+            <div class="column column--33">
+              <h2 class="column__title">Siguenos nuestras redes sociales</h2>
+              <p class="column__txt"><a href="" class="icon-facebook"></a></p>
+              <p class="column__txt"><a href="" class="icon-twitter"></a></p>
+              <p class="column__txt"><a href="" class="icon-youtube"></a></p>  
+            </div>
+            <p class="copy">© 2020 Paseo Barranquilla | Todos los Derechos Reservados</p>
+        </div>
+    </footer>
+    <script src="js/menu.js"></script>
+    <script src="js/agregarpro.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

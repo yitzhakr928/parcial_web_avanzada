@@ -1,0 +1,67 @@
+.titulo_Admi{
+    text-align: center;
+    font-family: "Lobster",cursive;
+}
+
+h4{
+    font-family: "Lobster",cursive;  
+}
+.form{
+    padding: 0;
+}
+
+.casillas{
+    margin: 0 2% 0 2%;
+}
+
+.columna1 {
+    display: inline-table;
+    margin-right: 2%;
+    width: 30%;
+   
+}
+
+.titulo{
+    margin-bottom: 2%;
+}
+
+.casilla{
+    margin-bottom: 2%;
+    width: auto;
+}
+
+.forma{
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.fecha , .hora{
+    border: none;
+    border-bottom: 2px solid black;
+    text-align: center;
+}
+
+.cancha{
+    width: 40%;
+}
+.cantidad{
+    text-align: center;
+    width: 10%;
+    height: auto;
+    margin: 5px;
+}
+
+#eliminar{
+    border: none;
+    background: rgba(0, 0, 0, 0.432);
+}
+
+#eliminar:hover{
+background: black;
+color: white;
+}
+
+.agg{
+    margin-bottom: 2%;
+}
+
