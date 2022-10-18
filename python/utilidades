@@ -1,0 +1,43 @@
+class Utilidades:
+
+    _nombre = ""
+    _codigo = 0
+    _description = ""
+
+    def __init__(self, nombre, codigo, description):
+        self.nombre = nombre
+        self.codigo = codigo
+        self.description = description
+
+    @property
+    def nombre(self):
+        return self.nombre
+
+    @nombre.setter
+    def nombre(self, value):
+        self.nombre = value
+
+    @property
+    def description(self):
+        return self.description
+
+    @description.setter
+    def description(self, value):
+        self.description = value
+
+    @property
+    def codigo(self):
+        return self.codigo
+
+    @codigo.setter
+    def codigo(self, value):
+        self.codigo = value
+
+    def agregar(self):
+        pass
+
+    def editar(self):
+        pass
+
+    def elminar(self):
+        pass

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximun-scale=3.0, minimum-scale=1.0">
     <title>Cancha sintetica</title>
-    <link rel="stylesheet" href="css/stiloscss.css">
-    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/stiloscss.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename= 'fonts/font.css' )}}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 
@@ -31,7 +31,7 @@
                    
                 </div>
                 <section class="main-header__imagen column column--50">
-                    <img src="imagenes/logo-imagen/pngwing.com.png" alt="" width="auto" height="150px">
+                    <img src={{ url_for('static',filename="image/logo-imagen/pngwing.com.png") }} alt="" width="auto" height="150px">
                 </section>
             </div>
         </header>
@@ -75,14 +75,14 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active" style="height: 100vh;">
-                        <img class="d-block w-100" src="imagenes/CARRUCEL/cancha1.jpg" alt="First slide" height="100%" width="300px">
+                        <img class="d-block w-100" src={{ url_for('static',filename='image/CARRUCEL/cancha1.jpg')}} alt="First slide" height="100%" width="300px">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Metropolitano</h5>
                             <p>Cancha principal Estadio Metropolitano</p>
                         </div>
                     </div>
                     <div class="carousel-item" style="height: 100vh;">
-                        <img class="d-block w-100" src="imagenes/CARRUCEL/11x11.jpg" alt="Second slide" height="100%" width="300px">
+                        <img class="d-block w-100" src={{ url_for('static',filename='image/CARRUCEL/11x11.jpg')}} alt="Second slide" height="100%" width="300px">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Metropolitano</h5>
                             <p>Cancha 11 x 11 Unidad Deportiva y Recreativa "Pibe Valderrama"</p>
@@ -90,21 +90,21 @@
                         </div>
                     </div>
                     <div class="carousel-item" style="height: 100vh;">
-                        <img class="d-block w-100" src="imagenes/CARRUCEL/7x7.jpg" alt="Third slide" height="100%" width="300px">
+                        <img class="d-block w-100" src={{ url_for('static',filename='image/CARRUCEL/7x7.jpg') }} alt="Third slide" height="100%" width="300px">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Metropolitano</h5>
                             <p>Cancha 7 x 7 Unidad Deportiva y Recreativa "Pibe Valderama</p>
                         </div>
                     </div>
                     <div class="carousel-item" style="height: 100vh;">
-                        <img class="d-block w-100" src="imagenes/CARRUCEL/9x9.jpg" alt="Fourd slide" height="100%" width="300px">
+                        <img class="d-block w-100" src={{ url_for('static',filename='image/CARRUCEL/9x9.jpg') }} alt="Fourd slide" height="100%" width="300px">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Metropolitano</h5>
                             <p>Cancha 9 x 9 Unidad Deportiva y Recreativa "Pibe Valderrama"</p>
                         </div>
                     </div>
                     <div class="carousel-item" style="height: 100vh;">
-                        <img class="d-block w-100" src="imagenes/CARRUCEL/cancha altos del silencio.jpg" alt="Third slide" height="100%" width="300px">
+                        <img class="d-block w-100" src={{ url_for('static',filename='image/CARRUCEL/cancha_altos_del_silencio.jpg' ) }} alt="Third slide" height="100%" width="300px">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Metropolitano</h5>
                             <p>Parque Electrificadora (Cancha 1)</p>
@@ -120,8 +120,8 @@
                     <span class="sr-only">Siguiente</span>
                 </a>
             </div>
-            <!-- <img src="imagenes/banner.jpg" alt="" class="banner__img" height="300px" width="500px"> -->
-            <!-- <div class="banner_content"></div> -->
+            <!-- <img src="imagenes/banner.jpg" alt="" class="banner__img" height="300px" width="500px">
+            <div class="banner_content"></div> -->
         </section>
 
         <!-- contenido principal -->
@@ -138,7 +138,7 @@
                 <div class="container container--flex">
                     <div class="column column--50">
                         <div class="embed-responsive embed-responsive-16by9">
-                            <video  controls  src="imagenes/video/CLUB SANTA BARBARA - INAUGURACION CANCHA DE 11 SINTETICA.mp4"></video>
+                            <video  controls  src={{ url_for('static',filename='image/video/CLUB SANTA BARBARA - INAUGURACION CANCHA DE 11 SINTETICA.mp4') }}></video>
                             <!-- <iframe class="embed-responsive-item" src="https://vimeo.com/217235388" allowfullscreen></iframe> -->
                         </div>
                         <!-- <img src="imagenes/ventana.jpg" alt=""> -->
@@ -160,22 +160,22 @@
                 <h2 class="group__title">Ofertas Especiales De Hoy</h2>
                 <div class="container container__flex">
                     <div class="column column--50-25">
-                        <img src="imagenes/CARRUCEL/11x11.jpg" alt="" class="ofert-week__img">
+                        <img src={{ url_for('static',filename='image/CARRUCEL/11x11.jpg') }} alt="" class="ofert-week__img">
                         <div class="ofert-week__title">Cancha 11x11</div>
                         <div class="ofert-week__price">$60.000 la hora</div>
                     </div>
                     <div class="column column--50-25">
-                        <img src="imagenes/CARRUCEL/7x7.jpg" alt="" class="ofert-week__img">
+                        <img src={{ url_for('static',filename='image/CARRUCEL/7x7.jpg') }} alt="" class="ofert-week__img">
                         <div class="ofert-week__title">Cancha 7x7</div>
                         <div class="ofert-week__price">$40.000 la hora</div>
                     </div>
                     <div class="column column--50-25">
-                        <img src="imagenes/CARRUCEL/cancha altos del silencio.jpg" alt="" class="ofert-week__img">
+                        <img src={{url_for('static', filename='image/CARRUCEL/cancha altos del silencio.jpg')}} alt="" class="ofert-week__img">
                         <div class="ofert-week__title">Cancha altos del silecion</div>
                         <div class="ofert-week__price">$50.000 la hora</div>
                     </div>
                     <div class="column column--50-25">
-                        <img src="imagenes/CARRUCEL/cancha1.jpg" alt="" class="ofert-week__img">
+                        <img src={{ url_for('static',filename='image/CARRUCEL/cancha1.jpg') }} alt="" class="ofert-week__img">
                         <div class="ofert-week__title">Cancha Metropolitano</div>
                         <div class="ofert-week__price">$80.000 la hora</div>
                     </div>
@@ -214,7 +214,7 @@
         </footer>
 </div>
 
-<script src="js/menu.js"></script>
+<script src="{{url_for('static',filename='js/menu.js')}}"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
