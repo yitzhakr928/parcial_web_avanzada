@@ -1,174 +1,125 @@
-<!DOCTYPE html>
-<html lang="es">
+{% extends './layout.html' %}
+{%block active2 %}--select{%endblock%} 
+
+{% block body%}
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximun-scale=3.0, minimum-scale=1.0">
-    <title>Contacto</title>
-    <link rel="stylesheet" href="css/stiloscss.css">
-    <link rel="stylesheet" href="css/galeria.css.css">
-    <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/registro.css">
-    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/contacto.css')}}">
 </head>
-<body>
-    <header class="main-header">
-        <div class="container container--flex">
-            <div class="logo-container column column--50">
-                <h1 id="titulo" class="logo" >Sintentica Barranquilla</h1>
-            </div> 
-            <div class="main-header__contacInfo column column--50">
-                <p class="main-header__contacInfo__phone">
-                    <span class="icon-phone">3521990</span>
-                </p>
-                <p class="main-header__contacInfo__address"> 
-                    <span class="icon-gps">calle15#16a-96</span>
-                </p>
-            </div>
-        </div>
-    </header>
+<section class="banner">
+    <img src="{{url_for('static',filename='image/CARRUCEL/11x11.jpg')}}" alt="" class="banner__img" height="500px" width="500px" style="filter: blur(6px);">
+    <div class="banner_content">
+        Contacto <br>
+        Ubicanos en los siguientes Maps
+      </div>
 
-    <nav class="main-nav">
-        <nav class="navbar navbar-expand-lg  ">
-            <a class="navbar-brand" href="#" style="font-weight: bold;">Sinteticas Barranquilla</a>
-            <button class="navbar-toggler1" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link--select" href="Contacto.html">Contacto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Registro.html">Registro</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.html">Login</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+</section>
 
+<main class="main">
+  <div class="main_enunciado">
+      <div class="enunciado">
+          <p>
+              Aqui podras encontrar todas nuestras sucursales con sus respectivas direcciones, telefono, y asesores.
+              esperamos que sea de tu total agrado poder contactarnos, te esperamos en nuestras canchas, aparta tu cita ya!
+              Que esperas.
+          </p>
+      </div>
+  </div>
+  <div class="main_map">
+      <div class="cont_map">
+           <div class="map1">
+               <div class="Titulo">
+                  <h1>
+                      Canchas Disponibles
+                  </h1>
+               </div>
+               
+              <div class="map_1">
+                  <h2  class="h2t">Cancha 1</h2>
+                  <div id="map">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9316.461629982612!2d-74.79146020881129!3d10.95660467421617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d53672ef0fd%3A0xaf773379bbffc499!2scancha%20sintetica%20la%20patiada!5e0!3m2!1ses-419!2sco!4v1588978913303!5m2!1ses-419!2sco" width="100%" height="200px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                  </div>
+                  <p>
+                      cancha sintetica la patiada<br>
+                      Cra. 20 #301, Barranquilla, Atlántico
+                  </p>
+              </div>
+              <div class="map_1">
+                  <h2 class="h2t">Cancha 2</h2>
+                  <div id="map">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.7373743761977!2d-74.77365259961041!3d10.907552795745085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef5cd41c6c4925f%3A0xce9c01d5faf6ce2!2sCanchas%20sinteticas%20la%20cantera%20centro%20cormercial%20carnaval!5e0!3m2!1ses-419!2sco!4v1588981838426!5m2!1ses-419!2sco" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                  </div>
+                  <p>
+                      Canchas sinteticas la cantera centro cormercial carnaval<br>
+                      Calle15#16a-96, Soledad, Atlántico
+                  </p>
+              </div>
+          </div> 
 
-    </nav>
+          <div class="map1">
+              <div class="map_2">
+                  <h2 class="h2t">Cancha 3</h2>
+                  <div id="map">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6587.004918935779!2d-74.81526692239481!3d10.989274806700351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d1195a9c161%3A0x21e0280e86d1232c!2sParque%20del%20Sol!5e0!3m2!1ses-419!2sco!4v1588982611825!5m2!1ses-419!2sco" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                  </div>
+                  <p>
+                     Parque del Sol<br>
+                      Cra. 20 #301, Barranquilla, Atlántico
+                  </p>
+              </div>
+              <div class="map_1">
+                  <h2 class="h2t">Cancha 4</h2>
+                  <div id="map">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22160.36386653991!2d-74.78073004625301!3d10.930409073928937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc08109822eebe065!2sCancha%20la%20Solede%C3%B1a!5e0!3m2!1ses-419!2sco!4v1588982970821!5m2!1ses-419!2sco" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                  </div>
+                  <p>
+                      Cancha la Soledeña<br>
+                      Cl. 18 #28-69, Soledad, Atlántico
+                  </p>
+              </div>
+          </div> 
 
- 
-  <section class="banner">
-      <img src="imagenes/CARRUCEL/11x11.jpg" alt="" class="banner__img" height="500px" width="500px" style="filter: blur(6px);">
-      <div class="banner_content">
-          Contacto <br>
-          Ubicanos en los siguientes Maps
-        </div>
+      </div>
 
-  </section>
+  </div>
 
-  <main class="main">
-    <div class="main_enunciado">
-        <div class="enunciado">
-            <p>
-                Aqui podras encontrar todas nuestras sucursales con sus respectivas direcciones, telefono, y asesores.
-                esperamos que sea de tu total agrado poder contactarnos, te esperamos en nuestras canchas, aparta tu cita ya!
-                Que esperas.
+  <div>
+
+  </div>
+
+</main>
+
+  <footer class="main-footer">
+      <div class="container container--flex">
+          <div class="column column--33">
+            <h2 class="column__title">¿porque nos visitas?</h2>
+            <p class="column__txt">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Laudantium libero fuga pariatur illo nesciunt optio aspernatur dolorum eum ipsum molestias asperiores, eveniet deserunt sapiente. 
+                Neque quia esse explicabo quidem odio?
             </p>
-        </div>
-    </div>
-    <div class="main_map">
-        <div class="cont_map">
-             <div class="map1">
-                 <div class="Titulo">
-                    <h1>
-                        Canchas Disponibles
-                    </h1>
-                 </div>
-                 
-                <div class="map_1">
-                    <h2  class="h2t">Cancha 1</h2>
-                    <div id="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9316.461629982612!2d-74.79146020881129!3d10.95660467421617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d53672ef0fd%3A0xaf773379bbffc499!2scancha%20sintetica%20la%20patiada!5e0!3m2!1ses-419!2sco!4v1588978913303!5m2!1ses-419!2sco" width="100%" height="200px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                    </div>
-                    <p>
-                        cancha sintetica la patiada<br>
-                        Cra. 20 #301, Barranquilla, Atlántico
-                    </p>
-                </div>
-                <div class="map_1">
-                    <h2 class="h2t">Cancha 2</h2>
-                    <div id="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.7373743761977!2d-74.77365259961041!3d10.907552795745085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef5cd41c6c4925f%3A0xce9c01d5faf6ce2!2sCanchas%20sinteticas%20la%20cantera%20centro%20cormercial%20carnaval!5e0!3m2!1ses-419!2sco!4v1588981838426!5m2!1ses-419!2sco" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                    </div>
-                    <p>
-                        Canchas sinteticas la cantera centro cormercial carnaval<br>
-                        Calle15#16a-96, Soledad, Atlántico
-                    </p>
-                </div>
-            </div> 
-
-            <div class="map1">
-                <div class="map_2">
-                    <h2 class="h2t">Cancha 3</h2>
-                    <div id="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6587.004918935779!2d-74.81526692239481!3d10.989274806700351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d1195a9c161%3A0x21e0280e86d1232c!2sParque%20del%20Sol!5e0!3m2!1ses-419!2sco!4v1588982611825!5m2!1ses-419!2sco" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                    </div>
-                    <p>
-                       Parque del Sol<br>
-                        Cra. 20 #301, Barranquilla, Atlántico
-                    </p>
-                </div>
-                <div class="map_1">
-                    <h2 class="h2t">Cancha 4</h2>
-                    <div id="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22160.36386653991!2d-74.78073004625301!3d10.930409073928937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc08109822eebe065!2sCancha%20la%20Solede%C3%B1a!5e0!3m2!1ses-419!2sco!4v1588982970821!5m2!1ses-419!2sco" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                    </div>
-                    <p>
-                        Cancha la Soledeña<br>
-                        Cl. 18 #28-69, Soledad, Atlántico
-                    </p>
-                </div>
-            </div> 
-
-        </div>
-
-    </div>
-
-    <div>
-
-    </div>
-
-  </main>
-
-    <footer class="main-footer">
-        <div class="container container--flex">
-            <div class="column column--33">
-              <h2 class="column__title">¿porque nos visitas?</h2>
-              <p class="column__txt">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                  Laudantium libero fuga pariatur illo nesciunt optio aspernatur dolorum eum ipsum molestias asperiores, eveniet deserunt sapiente. 
-                  Neque quia esse explicabo quidem odio?
-              </p>
-              
-            </div>
-            <div class="column column--33">
-              <h2 class="column__title">Contactanos</h2>
-              <p class="column__txt">Direccion calle15#16a-96</p>
-              <p class="column__txt">Telefono 3022370061</p>
-              <p class="column__txt">yitzhakruiz@hotmail.com</p>
-            </div>
-            <div class="column column--33">
-              <h2 class="column__title">Siguenos nuestras redes sociales</h2>
-              <p class="column__txt"><a href="" class="icon-facebook"></a></p>
-              <p class="column__txt"><a href="" class="icon-twitter"></a></p>
-              <p class="column__txt"><a href="" class="icon-youtube"></a></p>  
-            </div>
-            <p class="copy">© 2020 Paseo Barranquilla | Todos los Derechos Reservados</p>
-        </div>
-    </footer>
-    <script src="js/menu.js"></script>
-    <script src="js/contacto.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+            
+          </div>
+          <div class="column column--33">
+            <h2 class="column__title">Contactanos</h2>
+            <p class="column__txt">Direccion calle15#16a-96</p>
+            <p class="column__txt">Telefono 3022370061</p>
+            <p class="column__txt">yitzhakruiz@hotmail.com</p>
+          </div>
+          <div class="column column--33">
+            <h2 class="column__title">Siguenos nuestras redes sociales</h2>
+            <p class="column__txt"><a href="" class="icon-facebook"></a></p>
+            <p class="column__txt"><a href="" class="icon-twitter"></a></p>
+            <p class="column__txt"><a href="" class="icon-youtube"></a></p>  
+          </div>
+          <p class="copy">© 2020 Paseo Barranquilla | Todos los Derechos Reservados</p>
+      </div>
+  </footer>
+  <script src="{{url_for('static',filename='js/menu.js')}}"></script>
+  <script src="{{url_for('static',filename='js/contacto.js')}}"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
-</html>
+
+{%endblock%}
+  

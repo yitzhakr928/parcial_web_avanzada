@@ -1,128 +1,92 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximun-scale=3.0, minimum-scale=1.0">
-    <title>login</title>
-    <link rel="stylesheet" href="css/stiloscss.css">
-    <link rel="stylesheet" href="css/galeria.css.css">
-    <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/login.css">
-</head>
-<body>
-    <header class="main-header">
-        <div class="container container--flex">
-            <div class="logo-container column column--50">
-                <h1 id="titulo" class="logo" >Sintentica Barranquilla</h1>
-            </div> 
-            <div class="main-header__contacInfo column column--50">
-                <p class="main-header__contacInfo__phone">
-                    <span class="icon-phone">3521990</span>
-                </p>
-                <p class="main-header__contacInfo__address"> 
-                    <span class="icon-gps">calle15#16a-96</span>
-                </p>
-            </div>
-        </div>
-    </header>
-
-    <nav class="main-nav">
-      <nav class="navbar navbar-expand-lg  ">
-          <a class="navbar-brand" href="#" style="font-weight: bold;">Sinteticas Barranquilla</a>
-          <button class="navbar-toggler1" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                  <li class="nav-item active">
-                      <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="Contacto.html">Contacto</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="Registro.html">Registro</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link--select" href="login.html">Login</a>
-                  </li>
-              </ul>
-          </div>
-      </nav>
-
-
-  </nav>
-
- 
-  <!-- <section class="banner">
+{%extends './layout.html' %}
+<!-- <section class="banner">
       <img src="imagenes/CARRUCEL/7x7.jpg" alt="" class="banner__img" height="500px" width="500px">
       <div class="banner_content">Registrate con nosotros aparta tu cancha!</div>
   </section> -->
+  {%block active4 %}--select{%endblock%}
 
+{% block body%}
+<html>
+
+<head>
+  <link rel="stylesheet" href="{{url_for('static',filename='css/login.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/galeria.css')}}">
+</head>
+
+<body>
   <main class="main">
-      <form class="main_login">
-          <div class="main_login_cont">
-            <section class="login">
-                <h2 class="titulo">login</h2>
-                <section class="main_casilla">
-                  <div class="main_casilla1">
-                    <img  class="icon_usuario" src="/ICONOS/icons8-usuario-masculino-64.png" >
-                  </div>
-                  <div class="main_casilla1">
-                    <input type="text" class="formato" placeholder="Usuario...">
-                  </div> 
-                </section>
-                <section class="main_casilla">
-                  <div class="main_casilla2">
-                    <img  class="icon_usuario" src="/ICONOS/icons8-contraseña-24.png" >
-                  </div>
-                  <div class="main_casilla2">
-                    <input type="password" class="formato" placeholder="Contraseña">
-                </section>
-                <section class="main_casilla">
-                  <input type="submit" class="formato" value="Iniciar" id="boton">
-                 </section>
-                  </div>
-               
+    <form class="main_login">
+      <div class="main_login_cont">
+        <section class="login">
+          <h2 class="titulo">login</h2>
+          <section class="main_casilla">
+            <div class="main_casilla1">
+              <img class="icon_usuario" src="{{url_for('static',filename='icons/icons8-usuario-masculino-64.png')}}">
+            </div>
+            <div class="main_casilla1">
+              <input type="text" class="formato" placeholder="Usuario...">
+            </div>
+          </section>
+          <section class="main_casilla">
+            <div class="main_casilla2">
+              <img class="icon_usuario" src=" {{url_for('static',filename='icons/icons8-contraseña-24.png')}}">
+            </div>
+            <div class="main_casilla2">
+              <input type="password" class="formato" placeholder="Contraseña">
+          </section>
+          <section class="main_casilla">
+            <input type="submit" class="formato" value="Iniciar" id="boton">
+          </section>
+      </div>
 
 
-            </section>
-          </div>
 
-      </form>
-    
+      </section>
+      </div>
+
+    </form>
+
   </main>
 
-    <footer class="main-footer">
-        <div class="container container--flex">
-            <div class="column column--33">
-              <h2 class="column__title">¿porque nos visitas?</h2>
-              <p class="column__txt">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                  Laudantium libero fuga pariatur illo nesciunt optio aspernatur dolorum eum ipsum molestias asperiores, eveniet deserunt sapiente. 
-                  Neque quia esse explicabo quidem odio?
-              </p>
-              
-            </div>
-            <div class="column column--33">
-              <h2 class="column__title">Contactanos</h2>
-              <p class="column__txt">Direccion calle15#16a-96</p>
-              <p class="column__txt">Telefono 3022370061</p>
-              <p class="column__txt">yitzhakruiz@hotmail.com</p>
-            </div>
-            <div class="column column--33">
-              <h2 class="column__title">Siguenos nuestras redes sociales</h2>
-              <p class="column__txt"><a href="" class="icon-facebook"></a></p>
-              <p class="column__txt"><a href="" class="icon-twitter"></a></p>
-              <p class="column__txt"><a href="" class="icon-youtube"></a></p>  
-            </div>
-            <p class="copy">© 2020 Paseo Barranquilla | Todos los Derechos Reservados</p>
-        </div>
-    </footer>
-    <script src="js/menu.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <footer class="main-footer">
+    <div class="container container--flex">
+      <div class="column column--33">
+        <h2 class="column__title">¿porque nos visitas?</h2>
+        <p class="column__txt">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Laudantium libero fuga pariatur illo nesciunt optio aspernatur dolorum eum ipsum molestias asperiores, eveniet
+          deserunt sapiente.
+          Neque quia esse explicabo quidem odio?
+        </p>
+
+      </div>
+      <div class="column column--33">
+        <h2 class="column__title">Contactanos</h2>
+        <p class="column__txt">Direccion calle15#16a-96</p>
+        <p class="column__txt">Telefono 3022370061</p>
+        <p class="column__txt">yitzhakruiz@hotmail.com</p>
+      </div>
+      <div class="column column--33">
+        <h2 class="column__title">Siguenos nuestras redes sociales</h2>
+        <p class="column__txt"><a href="" class="icon-facebook"></a></p>
+        <p class="column__txt"><a href="" class="icon-twitter"></a></p>
+        <p class="column__txt"><a href="" class="icon-youtube"></a></p>
+      </div>
+      <p class="copy">© 2020 Paseo Barranquilla | Todos los Derechos Reservados</p>
+    </div>
+  </footer>
+  <script src="{{url_for('static',filename='js/menu.js')}}"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
+
+{%endblock%}
