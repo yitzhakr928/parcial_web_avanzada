@@ -1,56 +1,42 @@
-from persona_asbtrac import Persona
+import persona_asbtrac as http
 
 
-class Cliente(Persona):
+class Cliente(http.persona):
 
-    
     _nombre = ""
     _apellido = ""
-    _cedula=""
+    _cedula = ""
     _fecha_nacimiento = ""
     _telefono = ""
     _email = ""
-    _genero=""
-    _pass=""
+    _pass = ""
     _estado = ""
 
-    def __init__(self, nombre,apellido, cedula,fecha_nacimiento, telefono, email,genero,password, estado="ACTIVO"):
+    def __init__(self, nombre, apellido, cedula, fecha_nacimiento, telefono, email, genero, password, estado="ACTIVO"):
         self._nombre = nombre
-        self._apellido =apellido
+        self._apellido = apellido
         self._cedula = cedula
-        self._fecha_nacimiento= fecha_nacimiento
+        self._fecha_nacimiento = fecha_nacimiento
         self._telefono = telefono
         self._email = email
-        self._pass= password
-        self._genero= genero
+        self._pass = password
         self._estado = estado
 
-
     @property
-    def  password(self):
+    def password(self):
         return self._password
 
     @password.setter
     def password(self, value):
-         self._password=value
-
-    @property
-    def genero(self):
-        return self._genero
-
-    @genero.setter
-    def genero(self, value):
-        self._genero = value
-
+        self._password = value
 
     @property
     def fecha_nacimiento(self):
         return self._fecha_nacimiento
 
     @fecha_nacimiento.setter
-    def fecha_nacimiento(self,value):
+    def fecha_nacimiento(self, value):
         self._fecha_nacimiento = value
-
 
     @property
     def apellido(self):
@@ -61,11 +47,11 @@ class Cliente(Persona):
         self._apellido = value
 
     @property
-    def  Cedula(self):
+    def Cedula(self):
         return self._cedula
 
     @Cedula.setter
-    def  Cedula(self, value):
+    def Cedula(self, value):
         self._cedula = value
 
     @property
@@ -99,13 +85,11 @@ class Cliente(Persona):
     @Email.setter
     def Email(self, email):
         self._email = email
-
-
-
-
+        
 
     def agregar(self):
         pass
+
 
     def editar(self):
         pass
