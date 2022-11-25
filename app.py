@@ -3,8 +3,9 @@ from flask_sqlalchemy import SQLAlchemy
 from python.cliente import  Cliente
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/web_avanzada'
-# db = SQLAlchemy(app)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/cable_exito'
+db = SQLAlchemy(app)
+
 
 
 @app.route('/')
@@ -29,7 +30,7 @@ def registro_db():
         # print(nombre,apellido,cedula,nacimiento,telefono,email)
         usuario =Cliente( nombre=nombre,apellido=apellido,cedula=cedula,fecha_nacimiento=nacimiento,telefono=telefono,email=email)
         
-        print(usuario.__str__())
+        # print(usuario.__str__())
         return redirect(url_for("registro"))
 
 

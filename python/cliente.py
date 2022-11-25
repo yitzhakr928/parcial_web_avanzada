@@ -1,7 +1,7 @@
-import persona_asbtrac as http
+from python.persona_asbtrac import persona
 
 
-class Cliente(http.persona):
+class Cliente(persona):
 
     _nombre = ""
     _apellido = ""
@@ -87,6 +87,9 @@ class Cliente(http.persona):
         self._email = email
         
 
+
+
+# ------metodos------
     def agregar(self):
         pass
 
