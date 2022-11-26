@@ -1,5 +1,6 @@
 from flask import Blueprint, request, redirect, url_for,render_template
-from python.cliente import  Cliente
+from python.MODELS.ModelsCliente import Clientes
+from utils.db import db
 
 registros= Blueprint('registros',__name__)
 
@@ -18,8 +19,8 @@ def registro_db():
         nacimiento = request.form['nacimiento']
         telefono = request.form['telefono']
         email = request.form['Correo']
-        # print(nombre,apellido,cedula,nacimiento,telefono,email)
-        usuario = Cliente( nombre=nombre,apellido=apellido,cedula=cedula,fecha_nacimiento=nacimiento,telefono=telefono,email=email)
-        
-        # print(usuario.__str__())
+        contraseña= request.form['contraseña']
+        usuario=Clientes(nombre,apellido,cedula,nacimiento,telefono,email,contraseña)
+        db.session.add(usuario)
+        db.session.Commit()
         return redirect(url_for("registro"))

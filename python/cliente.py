@@ -90,7 +90,8 @@ class Cliente(persona):
 
 
 # ------metodos------
-    def agregar(self):
+    def agregar(self, db):
+        
         pass
 
 
