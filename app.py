@@ -1,10 +1,14 @@
-from flask import  Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
+from routes.registro import registros
 
 
-app= Flask(__name__)
+app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/web_avanzada'
-# db = SQLAlchemy(app)
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
+
+app.register_blueprint(registros)
+db = SQLAlchemy(app)
 
 
 
@@ -12,16 +16,13 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/web_avanzada'
 def index():
     return render_template('index.html')
 
-@app.route('/registro/')
-def registro():
-    return render_template('registro.html')
-
 
 @app.route('/contacto/')
 def contacto():
     return render_template('Contacto.html')
 
-@app.route('/login/')
+
+@app.route('/login/', methods=["GET", "POST"])
 def login():
     return render_template('login.html')
 
