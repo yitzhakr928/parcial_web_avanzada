@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app= Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/web_avanzada'
-db = SQLAlchemy(app)
+# db = SQLAlchemy(app)
 
 
 

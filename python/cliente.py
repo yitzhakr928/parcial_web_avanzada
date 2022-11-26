@@ -1,7 +1,7 @@
-from persona_asbtrac import Persona
+from persona_asbtrac import persona
 
 
-class Cliente(Persona):
+class Cliente(persona):
 
     
     _nombre = ""
