@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{url_for('static',filename='css/registro.css')}}">
 </head>
 <body>
+
  
   <!-- <section class="banner">
       <img src="imagenes/CARRUCEL/7x7.jpg" alt="" class="banner__img" height="500px" width="500px" style="filter: blur(6px);">
@@ -24,6 +25,25 @@
   <main class="main">
     <div class="main_formulario">
       <form action="/registro_db/" method="POST">
+        
+        <div class="main_casillas">
+
+            {% with message=get_flashed_messages() %}
+                {% if message  %}
+                    {% if message[0]=="ya se encuentra registrado el correo" %}
+                      <div class="alert alert-warning" role="alert" style="margin-left:5rem; margin-right:6rem;">
+                        {{message[0]}}
+                      </div>
+                    {%  elif message[0] == "Registro con exito"   %}
+                      <div class="alert alert-success" role="alert" style="margin-left:5rem; margin-right:6rem;">{{message[0]}}</div>
+                    {% endif %}        
+                    {%  elif message[0] == "Error de Registro"   %}
+                      <div class="alert alert-success" role="alert" style="margin-left:5rem; margin-right:6rem;">{{message[0]}}</div>
+                    {% endif %}            
+                  {% endif %}
+            {% endwith %}
+         </div>
+
         <div class="contexto">
           <h2 class="Titulo_Registro">Registro</h2>
         <div class="main_casillas">
@@ -62,8 +82,6 @@
         <div class="main_casillas">
             <input type="submit" value="Registrarse" class="formato" id="boton">
         </div>
-        </div>
-        
       </form>
     </div>
   </main>

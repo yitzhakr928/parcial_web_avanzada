@@ -15,7 +15,7 @@
 
 <body>
   <main class="main">
-    <form class="main_login">
+    <form class="main_login" action="/login_auth_token/" method="post">
       <div class="main_login_cont">
         <section class="login">
           <h2 class="titulo">login</h2>
@@ -24,7 +24,7 @@
               <img class="icon_usuario" src="{{url_for('static',filename='icons/icons8-usuario-masculino-64.png')}}">
             </div>
             <div class="main_casilla1">
-              <input type="text" class="formato" placeholder="Usuario...">
+              <input type="text" class="formato" placeholder="Usuario..." name="usuario">
             </div>
           </section>
           <section class="main_casilla">
@@ -32,10 +32,10 @@
               <img class="icon_usuario" src=" {{url_for('static',filename='icons/icons8-contraseña-24.png')}}">
             </div>
             <div class="main_casilla2">
-              <input type="password" class="formato" placeholder="Contraseña">
+              <input type="password" class="formato" placeholder="Contraseña" name="password">
           </section>
           <section class="main_casilla">
-            <input type="submit" class="formato" value="Iniciar" id="boton">
+            <button type=submit class="formato" value="Iniciar" id="boton" >Entrar</button>
           </section>
       </div>
 
