@@ -21,6 +21,8 @@ def registro_db():
         email = request.form['Correo']
         contraseña= request.form['contraseña']
         usuario=Clientes(nombre,apellido,cedula,nacimiento,telefono,email,contraseña)
-        db.session.add(usuario)
-        db.session.Commit()
-        return redirect(url_for("registro"))
+        # busqueda= db.session.query(Clientes).get(Clientes.cedula)
+        print(db.session.query(Clientes).get(3))
+        # db.session.add(usuario)
+        # db.session.commit()
+        return redirect("/registro/")
