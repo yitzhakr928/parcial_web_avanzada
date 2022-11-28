@@ -15,12 +15,12 @@ def registro():
 def registro_db():
     message = ""
     if request.method == "POST":
-        nombre = request.form["Nombre"]
-        apellido = request.form["Apellido"]
+        nombre = request.form["Nombre"].lower()
+        apellido = request.form["Apellido"].lower()
         cedula = request.form["Cedula"]
         nacimiento = request.form["nacimiento"]
         telefono = request.form["telefono"]
-        email = request.form["Correo"]
+        email = request.form["Correo"].lower()
         contraseña = request.form["contraseña"]
         try:
             busqueda = (db.session.query(Clientes).filter_by(correo=email).first())
