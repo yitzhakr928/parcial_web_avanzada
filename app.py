@@ -1,7 +1,7 @@
 from flask import Flask
 from routes.sub_routes import registro, login, index,contacto, administrador
 from utils.db import db
-from dotenv import load_dotenv
+
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/web_avanzada'
@@ -20,5 +20,4 @@ with app.app_context():
     db.create_all()
     
 if __name__ == '__main__':
-    load_dotenv()
     app.run(debug=True)
