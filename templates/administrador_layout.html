@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{{url_for('static',filename='css/registro.css')}}">
     <link rel="stylesheet" href="{{url_for('static',filename='css/administrados.css')}}">
+    {%block header%}{%endblock%}
 </head>
 <body>
     <header class="main-header">
@@ -37,10 +38,10 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav">
                   <li class="nav-item active">
-                      <a class="nav-link--select" href="administrador.html">Reserva Cancha <span class="sr-only">(current)</span></a>
+                      <a class="nav-link{% block select1 %}{% endblock %} " href="/dashboard/panel/">Reserva Cancha <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="">horario</a>
+                      <a class="nav-link{% block select2 %}{% endblock %}  " href="/dashboard/calendar/">Eventos</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link" href="login.html">salir</a>
@@ -51,7 +52,9 @@
       </nav>
   </nav>
 
+  {% block content  %}
   
+  {% endblock  %}
 
     <footer class="main-footer">
         <div class="container container--flex">

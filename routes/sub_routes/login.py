@@ -23,9 +23,10 @@ def validar_usuario():
             if data["username"] == name:
                 if data["password"] != password:
                     alerta="Datos incorrectos"
-                    return  f"{alerta}"
+                    return redirect("/login/")
                 else:
-                    return write_token(data=data)
+                     print(write_token(data=data))
+                     return redirect("/dashboard/panel/")
             else:
                 response = jsonify({"message": "User not found"})
                 response.status_code = 404
@@ -40,6 +41,8 @@ def validar_usuario():
 def verify():
     token=request.headers["Authorization"].split(" ")[1]
     return valida_token(token, output=True)
+
+
 
 
 def consultar_user(user):

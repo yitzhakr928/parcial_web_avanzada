@@ -24,7 +24,6 @@ def registro_db():
         contraseña = request.form["contraseña"]
         try:
             busqueda = (db.session.query(Clientes).filter_by(correo=email).first())
-            print(busqueda.id)
             message="ya se encuentra registrado el correo"
         except Exception:
             usuario = Clientes( nombre, apellido, cedula, nacimiento, telefono, email, contraseña )

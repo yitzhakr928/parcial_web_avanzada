@@ -1,0 +1,126 @@
+{% extends './administrador_layout.html' %}
+
+{%block select1%}
+--select
+{% endblock %}
+
+
+
+
+{% block content  %}
+  
+<main class="main">
+    <div class="main_formulario">
+        <h1 class="titulo_Admi">Bienvenido al sistema de Reserva de Cancha</h1>
+      <form action="/dashboard/send-db/" method="get">
+        <div class="casillas">
+            <div class="columna1">
+                <div class="cont">
+                    <h4 class="titulo">Informacion de la persona a Reserva</h4>
+                <div class="casilla">
+                    <div>
+                        <input type="text" class="forma" name="nombre_apellido" placeholder="Nombre y apellido" >
+                    </div>    
+                </div>
+                <div class="casilla">
+                    <div>
+                        <input type="number" class="forma" name="Cedula" placeholder="Cedula">
+                    </div>
+                </div>
+                <div class="casilla">
+                    <div>
+                        <input type="number" class="forma" name="Telefono" placeholder="Telefono">
+                    </div>
+                </div> 
+                <div class="casilla">
+                    <div>
+                        <input type="email" class="forma" name="email" placeholder="Correo Electronico">
+                    </div>
+                </div>
+                </div>
+                
+            </div>
+            <div class="columna1">
+                <div class="cont">
+                    <h4 class="titulo">Seleccion de Cancha</h4>
+                <div class="casilla">
+                    <div >
+                        <select name="Cancha" class="cancha">
+                            <option>Ninguna</option>
+                            <optgroup label="cancha1">
+                               <option >
+                                cancha sintetica la patiada
+                                Cra. 20 #301, Barranquilla, Atlántico 
+                               </option >
+                            </optgroup>
+                            <optgroup label="cancha2">
+                                <option>
+                                    la cantera centro cormercial carnaval
+                                    Calle15#16a-96, Soledad, Atlántico 
+                                 </option>
+                            </optgroup>
+                            <optgroup label="cancha3">
+                                <option>
+                                    Parque del Sol
+                                    Cra. 20 #301, Barranquilla, Atlántico 
+                                 </option>
+                            </optgroup>
+                            <optgroup label="cancha4">
+                                <option>
+                                    Cancha la Soledeña
+                                    Cl. 18 #28-69, Soledad, Atlántico 
+                                 </option>
+                            </optgroup>
+                          </select>
+                    </div>
+                </div>
+              
+                    <div class="casilla ">
+                        <h4>horario</h4>
+                        <div>
+                            <span>Fecha</span><br>
+                          <input type="date" name="fecha" class=" fecha">
+                        </div>
+                        <div class="horas">
+                            <div>
+                                
+                            </div>
+                            <div>
+                                <span>Cuantas horas</span><br>
+                                <input type="number" class="hora" name="hora">
+                            </div>
+                        </div>
+                    </div>
+              
+                </div>
+                
+                
+            </div> 
+            <div class="columna1">
+                <h4>Objetos para alquilar</h4>
+                <div id="obj">
+                    <div class="agg">
+                        <select name="obejetos-aquiler" id="Objetos">
+                            <option value="0">Ninguno</option>
+                            <option value="1">petos</option>
+                            <option value="2">Conos</option>
+                            <option value="3">Balones</option>
+                            <option value="4">Tacos</option>
+                            <option value="5">Canilleras</option>
+                            <option value="6">Guantes</option>
+                        </select>
+                        <input type="number" class="cantidad" >
+                    </div>
+                    
+                </div>
+                <input type="button" value="Agregar" name="boton" id="boton_agregar">
+            </div>           
+        </div>
+        <button type="submit" class="btn btn-primary"
+                 style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                Reservar
+        </button>
+        </form>
+    </div>
+  </main>
+{% endblock  %}
